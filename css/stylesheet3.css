@@ -1,0 +1,113 @@
+@charset "utf-8" ;
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: Light;
+}
+
+/*375*/
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+h1 {
+    position: absolute;
+    width: 75px;
+    top:22px;
+    left: 9.6%;
+}
+
+h1 img {
+    width: 100%;
+}
+
+.blind {
+    position: absolute;
+    left: -9999px;
+}
+
+.btn_open {
+    position: relative;
+    background: url(../img/103.png) no-repeat center/contain;
+    text-indent: -9999em;
+    width: 50px;
+    height: 24px;
+    float: right;
+    top: 37px;
+    right: 7.7%; 
+    
+}
+nav {
+    position: fixed;
+    right: -100%;
+    top : 0;
+    width: 100%;
+    height: 100%;
+ 
+}
+.nav_inner{
+    width: 70.4%;
+    height: 100%;
+    background: rgba(255,255,255,0.7);
+    position: absolute;
+    right : 0 ;
+    border: 1px solid #707070;
+    border-right: 0;
+    border-radius: 10px 0 0 10px;
+    display: none;
+}
+.nav_inner ul {
+    flex-direction: column; 
+    align-items: flex-end; 
+    height: 100%;
+    padding: 0; 
+    margin: 0;
+    margin-top: 100px;
+    border-top: 3px solid #000;
+    background: url(../img/logo.png) no-repeat ;
+    background-position: 50% 380px;
+    background-size: 106px 111px;
+}
+
+.nav_inner li {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    align-items: center; 
+    justify-content: center; 
+    font-size: 25px;
+    border-bottom: 3px solid #000 ;
+}
+
+.btn_close {
+    position: absolute;
+    background: url(../img/close.png) no-repeat center/contain;
+    text-indent: -9999em;
+    width: 50px;
+    height: 24px;
+    float: right;
+    top: 37px;
+    right : 10.5%;
+}
+
+.img_wrap1{
+    height: 581px;
+    background: url(../img/2-1.jpg) no-repeat 80%/cover;
+    position: relative;
+}
+
+.logo{
+    background : url(../img/logo.png) no-repeat center/contain;
+    width: 186px;
+    height: 196px;
+    position: relative;
+    left: 26%;
+    margin-top: 60px;
+}
+

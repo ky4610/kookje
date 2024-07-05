@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/stylesheet2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<script>
+        $(function(){
+         $(".btn_open").click(function() {
+          $("nav").addClass("open").animate({ right: 0 }, 800, function(){
+            $("btn_open").removeClass("open")
+            $(".btn_open").hide();
+          });
+           });
+
+          $(".btn_close").click(function() {
+            $("nav").animate({ right: "-100%" }, 800, function() {
+            $(this).removeClass("open").css("right", "-100%");  
+            $(".btn_open").show();
+            });
+           });
+           $(window).resize(function(){
+            var win_w = $(window).width()
+            if(win_w >= 1007){
+              $('nav').css({right:0})
+              $('.btn_open').hide()
+            } else {
+              $('nav').css({right:'-100%'})
+              $('.btn_open').show()
+            }
+          })
+        });
+        
+        $(function(){
+            $(window).scroll(function(){
+                var win_top = $(window).scrollTop(); 
+                var win_h = $(window).height(); 
+                var SD_top = $('.SD').offset().top; 
+
+                $('.SD_img').each(function(){
+                    var box_top = $(this).offset().top;
+
+                    if(win_top >= box_top - 300){
+                        $(this).addClass('on');
+                    }
+                })
+                $('.SD_p').each(function(){
+                    var box_top = $(this).offset().top
+
+                    if(win_top >= box_top - 300){
+                        $(this).addClass('on')
+                    }
+                })
+                $('.Export_p h2').each(function(){
+                    var box_top = $(this).offset().top
+
+                    if(win_top >= box_top - 500){
+                        $(this).addClass('on')
+                    }
+                })
+                $('.Export_p h3').each(function(){
+                    var box_top = $(this).offset().top
+
+                    if(win_top >= box_top - 500){
+                        $(this).addClass('on')
+                    }
+                })
+                $('.Export_p p').each(function(){
+                    var box_top = $(this).offset().top
+
+                    if(win_top >= box_top - 500){
+                        $(this).addClass('on')
+                    }
+                })
+                $('.Order div').each(function(){
+                    var box_top = $(this).offset().top
+
+                    if(win_top >= box_top - 500){
+                        $(this).addClass('on')
+                    }
+                })
+            })
+        });
+
+</script>
+<body>
+    
+    <header> <!--head-->
+        <div class="head">   
+            <h1>
+              <a href="kookje.html"><img src="img/logo.png" alt="kookje"></a>
+            </h1>
+            <button class="btn_open">메뉴 열기</button>
+           <nav>
+          <h2 class="blind">주메뉴 영역</h2> 
+            <div class="nav_inner">
+              <button class="btn_close">메뉴 닫기</button>
+              <ul>
+                 <li><a href="kookje2.html">About us</a></li>
+                 <li><a href="#">Product</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    </header>   
+    
+    
+    <div class="visual"> <!--visual-->
+        <div class="slider">
+            <div class="img_wrap1">
+              <div class="text">
+                <h2>About us</h2>
+                <p>국제 악세서리의 제품의 모든 노하우를 담다.</p>
+              </div>
+            </div>
+        </div>
+   
+    </div>
+
+    <main>
+
+        <section>
+       <div>
+            <div class="Produce_img"></div>
+            <div class="Produce_p">
+                <h2>PRODUCE</h2>
+                 <h3>오직 정직한 소재로 제작된 악세서리</h3>
+                 <p>30년전 과 똑같은 소재로 똑같은 생산공정을 거쳐 제작 진행된 무해한 소재가 첨가되지않는 악세서리 입니다. </p>   
+            </div>
+        </div>
+        </section>
+
+        <section>
+            <div class="SD">
+                 <div class="SD_img"></div>
+                 <div class="SD_p">
+                    <h2>SIGNATURE DESIGN</h2>
+                    <h3>디자인 노하우 만들어진 악세서리 </h3>
+                    <p>꾸준한 개발로 이어온 디자인 노하우로 자체 개발한 시그니쳐 디자인을 '국제'매장을 통해 만나보실 수 있습니다.</p>
+                 </div>
+             </div>
+        </section>
+
+        <section>
+            <div class="Export clearfix">
+                 <div class="Export_img"></div>
+                 <div class="Export_p">
+                    <h2>EXPORT</h2>
+                    <h3>해외수출 및 온라인 판매</h3>
+                    <p>인도 일본 사우디 등등 해외 수출을 진행하고 있으며
+                        instagram으로 온라인 구매 상담가능 합니다.</p>
+                 </div>
+            </div>
+       
+        </section>
+
+        <section>
+            <div class="Order">
+                 <div class="Order_img"></div>
+                 <div class="Order_p">
+                    <h2>ORDER</h2>
+                    <h3>주문 제작</h3>
+                    <p>도매주문시 100개 단위 로 진행되며 주문시 바로 주문제작이 진행됩니다.소매는 매장방문시 제품을 이용 하실수있습니다.</p>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="line">
+        <svg xmlns="http://www.w3.org/2000/svg" width="" height="" viewBox="0 0 276.445 1">
+          <line id="line_20" data-name="line 20" x2="276.445" transform="translate(0 0.5)" fill="none" stroke="#707070" stroke-width="1"/>
+        </svg>
+        
+      </div>
+  
+    </main>
+  
+      <footer><!--footer-->
+  
+        <div>
+          <div class="footer_logo">
+            <span>
+            logo
+            </span>
+          </div>
+  
+        <div class="footer_link">
+          <a href="#" target="_blank" title="새창" style="width: 64px; height: 64px;"><img src="img/ins.png" alt="insta" ></a>
+          <a href="#" target="_blank" title="새창" style="width: 64px; height: 64px;"><img src="img/kko.png" alt="kakao"></a>
+          <a href="#" target="_blank" title="새창" style="width: 64px; height: 64px;"><img src="img/line.png" alt="line"></a>
+      </div>
+        
+        <div class="footer_p">
+            <P>
+              <span>서울특별시 중구 남창동 52-3 트릴리온빌딩 5층</span>
+              <span>tel 02-754-5646, 02-754-1334 </span>
+              <span>fax 02-3789-5646 </span>
+              <span>kookje5646@hotmail.net</span>
+            </P>
+          </div>
+          <div class="COPYRIGHT">
+            <p>
+              <span>COPYRIGHT © ALL RIGHT RESERVED.</span>
+            </p>
+          </div>
+  
+        </div>
+      </footer>
+
+</body>
+</html>
